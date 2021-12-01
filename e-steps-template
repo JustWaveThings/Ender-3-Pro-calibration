@@ -1,0 +1,23 @@
+MASTER
+Esteps Template: 
+    Date of calibration (mm/dd/yy): 
+    Material: 
+    Color: 
+    Brand: 
+    Tolerence: +- .05
+    HotEnd Temp: 
+    Start e-steps from firmware: 
+    Amount marked: 100mm
+    GCode Relative Extrusion Set (M83)?:  
+    Amount Extruded(run 3 times): ( , , ) # G1 E100 F100
+    #Calculate New E-steps:
+     # 1. (Amount Marked - how much extruded (negative value for less than 100mm extruded))
+     # 2. (steps / mm value ) * 100 = steps taken
+     # 3. (steps taken / actual length extruded) = accurate steps/mm value # we'll put this number into the firmware 
+    Math Calculations:
+    1.  
+    2.  
+    3.  
+    Result:   # goes into printer firmware M92 E###.#,  save with M500
+    #Restart Printer
+    #Run M503 - check M92 E-value  - Confirm it changed
